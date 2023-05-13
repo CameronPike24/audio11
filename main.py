@@ -11,11 +11,8 @@ from tools import AudioPlayer
 class MainApp(App):
 
     def build(self):
-        self.app = MainGrid()
-        
-        self.mic_info =  get_input_sources()
-        print("List of sources")
-        print(*self.mic_info, sep = ", ")
+        self.app = MainGrid()       
+
         return self.app
 
     def init_thread(self):

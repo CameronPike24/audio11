@@ -11,6 +11,11 @@ class AudioPlayer:
         self.stream = get_output(
             channels=channels, rate=rate, buffersize=chunk_size, encoding=16)
         # create instance of AudioSample to handle the audio stream (output) e.g. play and stop
+        
+        self.mic_info =  get_input_sources()
+        print("List of sources")
+        print(*self.mic_info, sep = ", ")
+        
         self.sample = AudioSample()
         self.chunk = np.zeros(chunk_size)
         # indicator
