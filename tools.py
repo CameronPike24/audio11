@@ -35,16 +35,16 @@ class AudioPlayer:
         #importlib.reload(sys.modules['audiostream']) # reloads the audiostream module - thought this might solve the problem; it doesn't!!
         self.mic = get_input(callback=self.micCallback, rate=8000, source='default', buffersize=2048) # initialises the method get_input from the module with the properties required   
         self.mic.start() # starts the method 'self.mic' recording audio data
-        Clock.schedule_interval(self.readChunk, 1 / self.samples_per_second) # calls the method 'self.readChunk' to read and store each audio buffer (2048 samples) 60 times per second
+        
       
     def micCallback(self, buffer):
         # method which is called by the method 'get_input' to store recorded audio data (each buffer of audio samples)
         self.audioData.append(buffer) # appends each buffer (chunk of audio data) to variable 'self.audioData'
         print('size of frames: ' + len(self.audioData))
 
-    #def start(self):
+    def start(self):
         # method which begins the process of recording the audio data
-
+        Clock.schedule_interval(self.readChunk, 1 / self.samples_per_second) # calls the method 'self.readChunk' to read and store each audio buffer (2048 samples) 60 times per second
 
     def readChunk(self, sampleRate):
         # method which coordinates the reading and storing of the bytes from each buffer of audio data (which is a chunk of 2048 samples)
