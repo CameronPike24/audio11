@@ -121,7 +121,8 @@ class AudioPlayer:
         self.freq_change = False
         print("self.mic.start()")
         self.mic.start() # starts the method 'self.mic' recording audio data
-        Clock.schedule_interval(self.readChunk, 1 / self.samples_per_second) # calls the method 'self.readChunk' to read and store each audio buffer (2048 samples) 60 times per second         
+        #Clock.schedule_interval(self.readChunk, 1 / self.samples_per_second) # calls the method 'self.readChunk' to read and store each audio buffer (2048 samples) 60 times per second   
+        Clock.schedule_interval(self.readChunk, 0.001)      
         
 
         while self.playing:
