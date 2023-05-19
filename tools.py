@@ -38,7 +38,7 @@ class AudioPlayer:
         #import sys
         #importlib.reload(sys.modules['audiostream']) # reloads the audiostream module - thought this might solve the problem; it doesn't!!
         #self.mic = get_input(callback=self.micCallback, rate=44100, source='default', buffersize=512, channels=1,encoding=16) # initialises the method get_input from the module with the properties
-        self.mic = get_input(callback=self.micCallback, rate=8000, source='default', buffersize=2048)  required   
+        self.mic = get_input(callback=self.micCallback, rate=8000, source='default', buffersize=2048) 
         #self.mic = get_input(callback=self.micCallback, source='default')
         print("self.mic = get_input")
       
