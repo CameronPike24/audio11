@@ -42,7 +42,8 @@ class AudioPlayer:
         #self.mic = get_input(callback=self.micCallback, rate=44100, source='default', buffersize=2048) #Unable to use rate 44100, channels=1, encoder=16
         #self.mic = get_input(callback=self.micCallback, source='default', buffersize=2048) # Default is 44100 not working. try 8000, 11025, 16000, 22050, 44100, 48000
         #self.mic = get_input(callback=self.micCallback, rate=48000, source='default', buffersize=2048) # 48000 not working. try 8000, 11025, 16000, 22050, 44100, 48000
-        self.mic = get_input(callback=self.micCallback, rate=22050, source='default', buffersize=2048) # Default is 44100 not working. try 8000, 11025, 16000, 22050, 44100, 48000
+        #self.mic = get_input(callback=self.micCallback, rate=22050, source='default', buffersize=2048) # Works but gets x\00x\00
+        self.mic = get_input(callback=self.micCallback, rate=22050, source='default') # Works but gets x\00x\00
         #self.mic = get_input(callback=self.micCallback, source='default')
         print("self.mic = get_input")
       
