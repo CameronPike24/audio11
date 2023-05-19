@@ -48,7 +48,7 @@ class AudioPlayer:
         self.audioData.append(buffer) # appends each buffer (chunk of audio data) to variable 'self.audioData'
         #print('size of frames: ' + str(len(self.audioData)))
         print('size of frames: ' + str(len(buffer)))
-        print(audioData)
+        print(self.audioData)
         #print ('got : ' + str(len(buf)))
 
     #def start(self):
