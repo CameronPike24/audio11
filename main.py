@@ -68,7 +68,8 @@ class MainGrid(BoxLayout):
                            x_grid_label=True, y_grid_label=False)
         # Mono, Sampling Rate, Chunksize
         print("self.player = AudioPlayer(1, 44100, self.samples)")
-        self.player = AudioPlayer(1, 44100, self.samples)
+        #self.player = AudioPlayer(1, 44100, self.samples)
+        self.player = AudioPlayer(1, 22050, self.samples)
         self.ids.modulation.add_widget(self.graph)
         self.plot_x = np.linspace(0, 1, self.samples)
         self.plot_y = np.zeros(self.samples)
