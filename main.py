@@ -54,7 +54,7 @@ class MainGrid(BoxLayout):
     print("class MainGrid")
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.samples = 512
+        self.samples = 1024
         self.zoom = 1
         print("self.graph = Graph")
         self.graph = Graph(y_ticks_major=0.5,

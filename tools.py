@@ -44,7 +44,8 @@ class AudioPlayer:
         #self.mic = get_input(callback=self.micCallback, rate=48000, source='default', buffersize=2048) # 48000 not working. try 8000, 11025, 16000, 22050, 44100, 48000
         #self.mic = get_input(callback=self.micCallback, rate=22050, source='default', buffersize=2048) # Works but gets x\00x\00
         #self.mic = get_input(callback=self.micCallback, rate=22050, source='default') # With no buffer does not work no frames
-        self.mic = get_input(callback=self.micCallback, rate=22050, source='default', buffersize=512) # 
+        #self.mic = get_input(callback=self.micCallback, rate=22050, source='default', buffersize=512) # does not work at all
+        self.mic = get_input(callback=self.micCallback, rate=22050, source='default', buffersize=1024) # does not work at all
         #self.mic = get_input(callback=self.micCallback, source='default')
         print("self.mic = get_input")
       
